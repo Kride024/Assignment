@@ -16,7 +16,7 @@ This is a React project built using **Vite** and **Tailwind CSS**, showcasing a 
    npm install
 
 3. **Vite & Tailwind Setup**
-   <pre>I followed the official Tailwind documentation for Vite:</pre>
+   I followed the official Tailwind documentation for Vite:
    ```bash
    https://tailwindcss.com/docs/installation/using-vite
 
