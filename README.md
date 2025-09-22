@@ -28,7 +28,7 @@ This is a React project built using **Vite** and **Tailwind CSS**, showcasing a 
 
 1. **Login / Sign Up**
    <pre>Go to https://vercel.com/
-    and log in using GitHub.</pre>
+   and log in using GitHub.</pre>
 
 2. **Import Repository**
    <ul>
