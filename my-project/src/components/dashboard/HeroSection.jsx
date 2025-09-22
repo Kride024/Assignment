@@ -13,11 +13,11 @@ export default function HeroSection() {
           SHOP NOW
         </button>
       </div>
-     <img
-  src="/products/ChatGPT Image Sep 21, 2025, 08_28_50 PM.png"
+     {/* <img
+  src="/product/Image.pnghttps://i.ytimg.com/vi/O2u8vU-AvZg/mqdefault.jpg"
   alt="Adidas Sneakers"
   className="absolute right-0 top-0 h-full object-cover z-0"
-/>
+/> */}
     </div>
   );
 }

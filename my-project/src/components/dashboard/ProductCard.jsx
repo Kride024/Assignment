@@ -1,7 +1,7 @@
 // src/components/ProductCard.js
 
 import React from "react";
-import { CartContext } from "./CartContext"; // ✅ import context
+import { CartContext } from "./CartContext"; 
 // You can also import the images directly if they're in the src folder
 // import sneakerImage from "../assets/sneaker.jpg";
 

@@ -1,22 +1,24 @@
-// src/components/dashboard/CartContext.js
-import React, { createContext, useState,useContext  } from "react";
+import React, { createContext, useState, useContext } from "react";
 
-
-// 1️⃣ Create the context
 export const CartContext = createContext();
 
-// 2️⃣ Create a provider component
 export function CartProvider({ children }) {
   const [cartTotal, setCartTotal] = useState(0);
+  const [selectedBrand, setSelectedBrand] = useState("All"); // 🔹 new filter state
 
-  // Function to add price to cart
   const addToCart = (price) => {
     setCartTotal((prev) => prev + price);
   };
 
   return (
-    <CartContext.Provider value={{ cartTotal, addToCart }}>
+    <CartContext.Provider
+      value={{ cartTotal, addToCart, selectedBrand, setSelectedBrand }}
+    >
       {children}
     </CartContext.Provider>
   );
+}
+
+export function useCart() {
+  return useContext(CartContext);
 }
