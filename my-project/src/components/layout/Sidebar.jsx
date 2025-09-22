@@ -2,7 +2,7 @@ import React from "react";
 import { useCart } from "../dashboard/CartContext";
 
 export default function Sidebar() {
-  const { selectedBrand, setSelectedBrand } = useCart();
+  const { selectedBrand, setSelectedBrand, priceRange, setPriceRange, selectedColor, setSelectedColor } = useCart();
 
   const hotDeals = [
     { name: "Nike", count: 16 },
@@ -19,6 +19,8 @@ export default function Sidebar() {
     { name: "Siemens", count: 99 },
   ];
 
+  const colors = ["All", "Red", "Blue", "Green", "Yellow", "Orange", "Purple","Grey","SkyBlue","Pink"];
+
   return (
     <aside className="w-70 p-6">
       {/* Hot Deals */}
@@ -34,28 +36,59 @@ export default function Sidebar() {
               }`}
             >
               <span>{deal.name}</span>
-              <span className={selectedBrand === deal.name ? "" : "opacity-30"}>
-                {deal.count}
-              </span>
+              <span className={selectedBrand === deal.name ? "" : "opacity-30"}>{deal.count}</span>
             </li>
           ))}
         </ul>
+
+        {/* ✅ More Button */}
+        <button className="mt-2 text-sm text-blue-500 hover:underline">
+          More
+        </button>
       </div>
 
-      {/* Prices (unchanged) */}
+      {/* Price Range */}
       <div className="mb-6 bg-neutral-100 p-4">
         <h2 className="text-[20px] font-medium font-['Poppins']">Prices</h2>
         <p className="mt-4 text-[16px]">
-          Range: <span className="ml-4">$13.99 – $25.99</span>
+          Range: <span className="ml-2">${priceRange[0]} – ${priceRange[1]}</span>
         </p>
-        <div className="relative mt-6 w-full h-1.5 bg-zinc-800 opacity-10 rounded">
-          <div className="absolute left-[20%] right-[10%] h-1.5 bg-sky-400 rounded"></div>
-          <div className="absolute left-[20%] -top-1 w-4 h-4 rounded-full bg-sky-400 border-2 border-white"></div>
-          <div className="absolute right-[10%] -top-1 w-4 h-4 rounded-full bg-sky-400 border-2 border-white"></div>
+        <input
+          type="range"
+          min={0}
+          max={200}
+          value={priceRange[0]}
+          onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])}
+          className="w-full mt-4"
+        />
+        <input
+          type="range"
+          min={0}
+          max={200}
+          value={priceRange[1]}
+          onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
+          className="w-full mt-2"
+        />
+      </div>
+
+      {/* Color Picker */}
+      <div className="mb-6 bg-neutral-100 p-4">
+        <h2 className="text-[20px] font-medium font-['Poppins']">Colors</h2>
+        <div className="flex flex-wrap gap-2 mt-4">
+          {colors.map((color) => (
+            <button
+              key={color}
+              onClick={() => setSelectedColor(color)}
+              className={`w-8 h-8 rounded-full border-2 border-gray-200 transition-transform ${
+                selectedColor === color ? "ring-2 ring-blue-500 scale-110" : ""
+              }`}
+              style={{ backgroundColor: color === "All" ? "#fff" : color.toLowerCase() }}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Brand list */}
+      {/* Brand List */}
       <div className="mb-6 bg-neutral-100 p-4">
         <h2 className="text-[20px] font-medium font-['Poppins']">Brand</h2>
         <ul className="mt-4 space-y-2 text-[16px] font-['Proxima_Nova']">
@@ -68,16 +101,13 @@ export default function Sidebar() {
               }`}
             >
               <span>{brand.name}</span>
-              <span className={selectedBrand === brand.name ? "" : "opacity-30"}>
-                {brand.count}
-              </span>
+              <span className={selectedBrand === brand.name ? "" : "opacity-30"}>{brand.count}</span>
             </li>
           ))}
         </ul>
       </div>
-
-      {/* More button */}
-      <button className="w-full py-3 mt-10 text-[20px] font-medium font-['Poppins'] bg-neutral-200 rounded">
+       {/* More button */}
+      <button className="w-full py-3 mt-3 text-[20px] font-medium font-['Poppins'] bg-neutral-200 rounded">
         MORE
       </button>
     </aside>
