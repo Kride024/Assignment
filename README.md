@@ -37,6 +37,24 @@ This is a React project built using **Vite** and **Tailwind CSS**, showcasing a 
     <li>Vercel automatically detects it as a Vite project.</li>
    </ul> 
 
+3. **Configure Project Settings**
+    <ul>
+    <li>Framework Preset: Vite (auto-detected)</li>
+    <li>Root Directory: . (root of repo)</li>
+    <li>Build Command: npm run build</li>
+    <li>Output Directory: dist (Vite default)</li>  
+   </ul> 
+
+4. **Deploy**
+     <ul>
+    <li> Click Deploy</li>
+    <li>SVercel builds the project and provides a live URL,</li>
+   </ul>
+   <pre>e.g., https://my-project.vercel.app.</pre>
+
+5. **Automatic Updates**
+   Every push to the main branch triggers an automatic rebuild and deployment.
+
 
 
     
