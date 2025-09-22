@@ -41,10 +41,7 @@ export default function Sidebar() {
           ))}
         </ul>
 
-        {/* ✅ More Button */}
-        <button className="mt-2 text-sm text-blue-500 hover:underline">
-          More
-        </button>
+      
       </div>
 
       {/* Price Range */}
