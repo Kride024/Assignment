@@ -24,6 +24,23 @@ This is a React project built using **Vite** and **Tailwind CSS**, showcasing a 
    ```bash
    npm run dev
 
+## Part 2: Deploying on Vercel  
+
+1. **Login / Sign Up**
+   <pre>Go to https://vercel.com/
+ and log in using GitHub.</pre>
+
+2. **Import Repository**
+   <ul>
+    <li> Click “New Project” → “Import Git Repository”</li>
+
+<li>Select your project repository from GitHub</li>
+
+<li>Vercel automatically detects it as a Vite project. </li>
+   </ul> 
+
+
+
     
    
 
