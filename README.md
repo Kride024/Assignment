@@ -1,6 +1,7 @@
 # My Project
 
-This is a React project built using **Vite** and **Tailwind CSS**, showcasing a product grid with filters, color pickers, and cart functionality.
+This is a modern **E-Commerce Website** built using **React**, **Vite**, and **Tailwind CSS**.  
+The project showcases a product grid with dynamic filtering, color pickers, pagination, and cart functionality, providing a smooth shopping experience.
 
 ---
 
