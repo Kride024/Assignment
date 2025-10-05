@@ -15,7 +15,7 @@ export default function HeroSection() {
       </div>
      <img
   src="/products/Image.png"
-  alt="Adidas Sneakers"
+  alt="Adidas  Sneakers"
   className="absolute right-0 top-0 h-full object-cover z-0"
 />
     </div>
