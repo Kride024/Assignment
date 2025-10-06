@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 4️⃣ Run tests (optional)
+      # 4️⃣ Run tests (optional this one)
       - name: Run tests (Skipped for deployment)
         run: echo "No automated tests configured, skipping npm test."
 
