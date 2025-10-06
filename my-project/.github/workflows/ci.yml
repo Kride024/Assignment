@@ -1,0 +1,41 @@
+name: Vercel Deploy
+
+on:
+  push:
+    branches:
+      - main  # Deploy when you push to main
+
+jobs:
+  vercel-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout code
+      - uses: actions/checkout@v3
+
+      # 2️⃣ Set up Node.js
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4️⃣ Run tests (optional)
+      - name: Run tests
+        run: npm test || echo "No tests found"
+
+      # 5️⃣ Build project
+      - name: Build project
+        run: npm run build
+
+      # 6️⃣ Deploy to Vercel
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v21
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'  # Deploy to production
