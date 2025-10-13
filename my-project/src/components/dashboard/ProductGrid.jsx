@@ -5,7 +5,7 @@ import { CartContext, useCart } from "./CartContext"; // ✅ import context
 
 // Product data
 const allProducts = [
-  { id: 1, name: "Modern Sneaker", brand: "Nike", image: "https://placehold.co/400x400/0000FF/FFFFFF?text=Sneaker", cost: "$75.00", rating: 4 },
+  { id: 1, name: "Modern Main Sneaker", brand: "Nike", image: "https://placehold.co/400x400/0000FF/FFFFFF?text=Sneaker", cost: "$75.00", rating: 4 },
   { id: 2, name: "Vintage T-Shirt", brand: "Adidas", image: "https://placehold.co/400x400/FF0000/FFFFFF?text=T-Shirt", cost: "$25.00", rating: 5 },
   { id: 3, name: "Leather Wallet", brand: "Nike", image: "https://placehold.co/400x400/008000/FFFFFF?text=Wallet", cost: "$50.00", rating: 4 },
   { id: 4, name: "Denim Jacket", brand: "Airmax", image: "https://placehold.co/400x400/800080/FFFFFF?text=Jacket", cost: "$99.00", rating: 3 },
