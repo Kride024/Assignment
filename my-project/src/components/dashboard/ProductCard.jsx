@@ -110,7 +110,7 @@ export default function ProductGrid() {
             <option value="Price: Low to High">Price: Low to High</option>
             <option value="Price: High to Low">Price: High to Low</option>
           </select>
-
+{/* //ad */}
           <label>Show:</label>
           <select
             value={itemsPerPage}
