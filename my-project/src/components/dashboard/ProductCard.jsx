@@ -80,7 +80,7 @@ export default function ProductGrid() {
   const filteredProducts = useMemo(() => {
     let filtered = selectedBrand === "All" ? allProducts : allProducts.filter(p => p.brand === selectedBrand);
 
-    if (sortOption === "Name") filtered.sort((a, b) => a.name.localeCompare(b.name));
+    if (sortOption === "branchName") filtered.sort((a, b) => a.name.localeCompare(b.name));
     else if (sortOption === "Price: Low to High") filtered.sort((a, b) => parseFloat(a.cost.slice(1)) - parseFloat(b.cost.slice(1)));
     else if (sortOption === "Price: High to Low") filtered.sort((a, b) => parseFloat(b.cost.slice(1)) - parseFloat(a.cost.slice(1)));
 
