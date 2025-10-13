@@ -13,7 +13,7 @@ const allProducts = [
   { id: 7, name: "Canvas Backpack", brand: "Vagabond", image: "https://placehold.co/400x400/00FFFF/000000?text=Backpack", cost: "$60.00", rating: 5 },
   { id: 8, name: "Beanie Hat", brand: "WinterWarm", image: "https://placehold.co/400x400/FF00FF/FFFFFF?text=Hat", cost: "$15.00", rating: 3 },
   { id: 9, name: "Striped Socks", brand: "Socktastic", image: "https://placehold.co/400x400/000000/FFFFFF?text=Socks", cost: "$10.00", rating: 4 },
-  { id: 10, name: "Water Bottle", brand: "Hydrate", image: "https://placehold.co/400x400/A52A2A/FFFFFF?text=Bottle", cost: "$20.00", rating: 5 },
+  { id: 10, name: "Water Bottles", brand: "Hydrate", image: "https://placehold.co/400x400/A52A2A/FFFFFF?text=Bottle", cost: "$20.00", rating: 5 },
 ];
 
 // Product card
