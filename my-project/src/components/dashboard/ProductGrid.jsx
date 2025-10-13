@@ -17,7 +17,7 @@ const allProducts = [
   { id: 10, name: "Water Bottle", brand: "Puma", image: "https://placehold.co/400x400/A52A2A/FFFFFF?text=Bottle", cost: "$20.00", rating: 5 },
   { id: 11, name: "Beanie Hat", brand: "All Stars", image: "https://placehold.co/400x400/FFA500/FFFFFF?text=Watch", cost: "$15.00", rating: 3 },
   { id: 12, name: "Beanie Hat", brand: "All Stars", image: "https://placehold.co/400x400/FF0000/FFFFFF?text=T-Shirt", cost: "$15.00", rating: 3 },
-  { id: 13, name: "Beanie Hat", brand: "All Stars", image: "https://placehold.co/400x400/008000/FFFFFF?text=Wallet", cost: "$15.00", rating: 3 },
+  { id: 13, name: "Beans Hat", brand: "All Stars", image: "https://placehold.co/400x400/008000/FFFFFF?text=Wallet", cost: "$15.00", rating: 3 },
 ];
 
 // ✅ ProductCard stays exactly same as original
